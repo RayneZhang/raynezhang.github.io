@@ -1598,7 +1598,7 @@
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -1615,7 +1615,7 @@
 
 	h2 {
 		font-size: 2em;
-		line-height: 1.5em;
+		line-height: 1.25em;
 		letter-spacing: -0.025em;
 	}
 
@@ -1654,11 +1654,11 @@
 	hr {
 		border: 0;
 		border-bottom: solid 1px rgba(255, 255, 255, 0.3);
-		margin: 3em 0;
+		margin: 2em 0;
 	}
 
 		hr.major {
-			margin: 4em 0;
+			margin: 2em 0;
 		}
 
 
@@ -2129,7 +2129,7 @@
 	}
 
 	header.major {
-		margin: 0 0 4em 0;
+		margin: 0 0 3em 0;
 		position: relative;
 		text-align: left;
 	}
