@@ -429,7 +429,8 @@
 		}
 
 		.row {
-			margin: -25px 0 -1px -25px;
+			margin: -25px 0 2em -25px;
+			align-items: center;
 		}
 
 		.row.uniform > * {
@@ -1754,10 +1755,16 @@
 			h3 {
 				font-size: 1.2em;
 				letter-spacing: -0.015em;
-                mairgin: 0;
+                margin: 0;
 			}
 
-			h1, h2, h4, h5, h6 {
+            h4 {
+                font-size: 1.5em;
+                letter-spacing: -0.015em;
+                margin: 0 0 0.2em 0;
+            }
+
+			h1, h2, h5, h6 {
 				margin: 0 0 0.75em 0;
 			}
 

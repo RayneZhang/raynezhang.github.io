@@ -12,6 +12,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/w3.css" />
+    <style>
+        .mySlides {display:none}
+        .w3-left, .w3-right, .w3-badge {cursor:pointer}
+        .w3-badge {height:13px;width:13px;padding:0}
+    </style>
     <link rel="stylesheet" href="assets/css/main.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -29,95 +35,173 @@
     </ul>
 </nav>
 
-<!-- Introduction -->
-<div class="wrapper style2">
-    <article id="introduction">
-        <div class="container">
-            <h2>Introduction</h2>
-            <p>I am a senior student in the School of Software, <a href="https://www.sjtu.edu.cn">Shanghai Jiao Tong University</a>.
-                I am a research member at <a href="http://dalab.se.sjtu.edu.cn">the Digital ART Lab</a> of Shanghai Jiao Tong University.
-                I have also conducted research at <a href="http://cascade.cs.illinois.edu/">Cascade Lab in University of Illinois, Urbana-Champaign</a>.
-            </p>
-            <p>My research interests lie primarily in the fields of <em><b>Human Computer Interaction</b></em>, <em><strong>Game Design and Mixed Reality</strong></em>.
-                I design interfaces, especially games, to help people gain better experiences and improve their lives.
-                I'm hoping to build novel interactive interfaces in a playful and aesthetic way. You can check out some of my projects/portfolio <a href="performances.html">here</a>.
-            </p>
-            <p>In my spare time, I am a rapper and I create my own music! I write, record and produce music in my studio.
-                You can check out some of my songs <a href="audio.html">here</a>. I am often invited to give performances on and off campus. Check out some of my performances <a href="performances.html">here</a>.
-            </p>
-            <p>Feel free to contact me via <a href="mailto:rayne_@sjtu.edu.cn">Email</a>, <a href="https://github.com/RayneZhang/">Github</a>, and <a href="https://www.facebook.com/RayneZL">Facebook</a>.</p>
-            <p>Check out the <b>CV</b> below to see more about my academic background.<br /></p>
-
-            <a href="#portfolio" class="button big scrolly">Curriculum Vitae</a>
-        </div>
-    </article>
-</div>
-
-<!-- Education -->
+<!-- Portfolio -->
 <div class="wrapper style3">
-    <article id="education">
+    <article id="work">
         <div class="container">
             <header>
-                <h2>Education</h2>
-                <h3>Bachelor of Engineering in Software Engineering</h3>
-                <p>Sept. 2014 - Jul. 2018, Shanghai Jiao Tong University (SJTU), Shanghai, China</p>
+                <h2 align="center">Here's some projects I did.</h2>
             </header>
-            <p>GPA (overall): 3.4/4.0; 3rd-year GPA: 3.8/4.0;<br />
-            Core courses: Introduction to Human Computer Interaction (A+), Game Designing and Programming (A), Computer Vision (A), Computer Graphics,
-                Introduction to Computer Systems (A+), Operating System, Software Engineering, Algorithm</p>
-        </div>
-    </article>
-</div>
+            <!--Cubicle-->
+            <div class="row">
+                <div class="1u 12u(mobile)">
+                </div>
+                <div class="5u 12u(mobile)">
+                    <div class="w3-content w3-display-container" style="max-width:800px">
+                        <img name="cubicle-img" class="mySlides" src="images/cubicle/1.png" style="width:100%; height:100%; min-height:300px;">
+                        <img name="cubicle-img" class="mySlides" src="images/cubicle/2.png" style="width:100%; height:100%; min-height:300px;">
+                        <img name="cubicle-img" class="mySlides" src="images/cubicle/3.png" style="width:100%; height:100%; min-height:300px;">
+                        <img name="cubicle-img" class="mySlides" src="images/cubicle/4.png" style="width:100%; height:100%; min-height:300px;">
+                        <img name="cubicle-img" class="mySlides" src="images/cubicle/5.png" style="width:100%; height:100% min-height:300px;">
+                        <img name="cubicle-img" class="mySlides" src="images/cubicle/6.png" style="width:100%; height:100% min-height:300px;">
+                        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                            <div class="w3-left w3-hover-text-khaki" onclick="plusDivsCubicle(-1)">&#10094;</div>
+                            <div class="w3-right w3-hover-text-khaki" onclick="plusDivsCubicle(1)">&#10095;</div>
+                            <span name="cubicle-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivCubicle(1)"></span>
+                            <span name="cubicle-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivCubicle(2)"></span>
+                            <span name="cubicle-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivCubicle(3)"></span>
+                            <span name="cubicle-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivCubicle(4)"></span>
+                            <span name="cubicle-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivCubicle(5)"></span>
+                            <span name="cubicle-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivCubicle(6)"></span>
+                        </div>
+                    </div>
+                    <script>
+                        var slideIndex = 1;
+                        showDivsCubicle(slideIndex);
 
-<!-- Research Experience -->
-<div class="wrapper style3">
-    <article id="research experience">
-        <div class="container">
-            <header>
-                <h2>Research Experience</h2>
-                <h3>Assembly Assistance in Augmented Reality</h3>
-                <p>Research Assistant at Digital ART Lab, Shanghai Jiao Tong University</p>
-            </header>
-            <p>Supervisor: <a href="http://dalab.se.sjtu.edu.cn/www/home/?page_id=143">Xubo Yang</a> (Professor in School of Software, SJTU)<br />
-                - Segmented the camera data from Kinect and converted it into 3D camera point clouds<br />
-                - Used the ICP algorithm to track and estimate the pose of 3D models in Unity<br />
-                - Designed and implemented the interaction between users and the system based on gestures and voices using HoloLens
-            </p>
+                        function plusDivsCubicle(n) {
+                            showDivsCubicle(slideIndex += n);
+                        }
+
+                        function currentDivCubicle(n) {
+                            showDivsCubicle(slideIndex = n);
+                        }
+
+                        function showDivsCubicle(n) {
+                            var i;
+                            var x = document.getElementsByName("cubicle-img");
+                            var dots = document.getElementsByName("cubicle-dot");
+                            if (n > x.length) {slideIndex = 1}
+                            if (n < 1) {slideIndex = x.length}
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" w3-white", "");
+                            }
+                            x[slideIndex-1].style.display = "block";
+                            dots[slideIndex-1].className += " w3-white";
+                        }
+                    </script>
+                </div>
+                <div class="5u 12u(mobile)">
+                    <article>
+                        <h4>Cubicle</h4>
+                        <p>This is my research project at UIUC. I gamified some paper-based spatial visualization skills training exercises into a gaming platform.
+                        The game called <em>Cubicle</em> contains eight modules. The premise of the game is that the player is trapped in a dungeon maze. To escape, the player
+                            needs to navigate through the maze and unlock all the rooms. Each room contains a totem, the entry to a game module. In each game module,
+                            a chain of locked rooms contains different levels in that game module. Finishing the game task in the room is the only way to unlock the door
+                            to the next room.
+                        </p>
+                    </article>
+                </div>
+                <div class="1u 12u(mobile)">
+                </div>
+            </div>
             <hr />
-            <header>
-                <h3>An Educational Gaming Platform</h3>
-                <p>Research Assistant internship at Cascade Lab, University of Illinois, Urbana-Champaign</p>
-            </header>
-            <p>Supervisor: <a href="http://cascade.cs.illinois.edu/people/wfu/">Wai-Tat Fu</a> (Associate Professor at the Department of Computer Science, UIUC)<br />
-                - Developed a sketching interface and integrated it into the online platform for training spatial visualization skills based on Unity webGL and Django, enhancing the usability of the existing online platform<br />
-                - Gamified paper-based spatial visualization skills training exercises into a scalable gaming platform<br />
-                - Co-designed the gaming mechanism to maintain both attractiveness and effectiveness of the game series<br />
-                - Implemented one of the modules in the game and recorded players’ in-game behavior with high granularity<br />
-                - Submitted a paper named "<em>Cubicle: An Adaptive Educational Gaming Platform for Training Spatial Visualization Skills</em>" as a co-author to IUI 2018.
-            </p>
+            <!--VR Maze-->
+            <div class="row">
+                <div class="1u 12u(mobile)">
+                </div>
+                <div class="5u 12u(mobile)">
+                    <article>
+                        <h4>VR Maze</h4>
+                        <p>This is a course project of Human-Computer Interaction.
+                            This game called <em>VR Maze</em> aims to train people's abilities of navigation. The player is put in a randomly generated maze at the beginning of the game. Given a
+                            randomly generated destination and the limited time to memorize the route on the minimap, the player will navigate in the maze using <strong>HTC VIVE</strong> handler.
+                            The amount of time that the player takes measures the player's navigation ability. The player wins the game once he/she reaches the destination.
+                            This project ranked the 1st out of 43 students in the Human-Computer Interaction course.
+                        </p>
+                    </article>
+                </div>
+                <div class="5u 12u(mobile)">
+                    <div class="w3-content w3-display-container" style="max-width:800px">
+                        <img name="maze-img" class="mySlides" src="images/maze/1.jpg" style="width:100%">
+                        <img name="maze-img" class="mySlides" src="images/maze/2.jpg" style="width:100%">
+                        <img name="maze-img" class="mySlides" src="images/maze/3.jpg" style="width:100%">
+                        <img name="maze-img" class="mySlides" src="images/maze/4.jpg" style="width:100%">
+                        <img name="maze-img" class="mySlides" src="images/maze/5.jpg" style="width:100%">
+                        <img name="maze-img" class="mySlides" src="images/maze/6.jpg" style="width:100%">
+                        <img name="maze-img" class="mySlides" src="images/maze/7.jpg" style="width:100%">
+                        <img name="maze-img" class="mySlides" src="images/maze/8.jpg" style="width:100%">
+                        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                            <div class="w3-left w3-hover-text-khaki" onclick="plusDivsMaze(-1)">&#10094;</div>
+                            <div class="w3-right w3-hover-text-khaki" onclick="plusDivsMaze(1)">&#10095;</div>
+                            <span name="maze-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivMaze(1)"></span>
+                            <span name="maze-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivMaze(2)"></span>
+                            <span name="maze-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivMaze(3)"></span>
+                            <span name="maze-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivMaze(4)"></span>
+                            <span name="maze-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivMaze(5)"></span>
+                            <span name="maze-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivMaze(6)"></span>
+                            <span name="maze-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivMaze(7)"></span>
+                            <span name="maze-dot" class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDivMaze(8)"></span>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var slideIndex = 1;
+                    showDivsMaze(slideIndex);
+
+                    function plusDivsMaze(n) {
+                        showDivsMaze(slideIndex += n);
+                    }
+
+                    function currentDivMaze(n) {
+                        showDivsMaze(slideIndex = n);
+                    }
+
+                    function showDivsMaze(n) {
+                        var i;
+                        var x = document.getElementsByName("maze-img");
+                        var dots = document.getElementsByName("maze-dot");
+                        if (n > x.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = x.length}
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" w3-white", "");
+                        }
+                        x[slideIndex-1].style.display = "block";
+                        dots[slideIndex-1].className += " w3-white";
+                    }
+                </script>
+                <div class="1u 12u(mobile)">
+                </div>
+            </div>
             <hr />
-            <header>
-                <h3>Virtual Broadcast Studio</h3>
-                <p>Research Assistant at Digital ART Lab, Shanghai Jiao Tong University</p>
-            </header>
-            <p>Supervisor: <a href="http://en.se.sjtu.edu.cn/teacher/teacherdetail.aspx?id=21">Shuangjiu Xiao</a> (Associate Professor in School of Software, SJTU)<br />
-                - Captured and filtered the camera data from the HD camera in Unity using the video capture card’s SDK<br />
-                - Implemented the calibration between the HD camera and a Microsoft Kinect using methods of checkerboard calibration<br />
-                - Designed and implemented the interaction between users and the virtual models based on gestures and voices using Kinect<br />
-                - Co-designed the storyline of the demo to demonstrate the interactions between users and the virtual world<br />
-                - A paper named "<em>Augmented Reality TV System Based on Multimodel Mixed Interactive Editing</em>"(written in Chinese) was accepted by ChinaVR 2017
-            </p>
-            <hr />
-            <header>
-                <h3>Family Sharing APP</h3>
-                <p>Research group leader, supported by the National University Student Innovation Program</p>
-            </header>
-            <p>Supervisor: <a href="http://en.se.sjtu.edu.cn/teacher/teacherdetail.aspx?id=9">Hongming Cai</a> (Professor in School of Software, SJTU)<br />
-                - Developed an Android APP for family members to share their schedules and personal goals as well as supervising and interacting with each other, with the goal of strengthening the family bond<br />
-                - Designed the ways of interaction between family members in the APP including likes, dislikes, various punishments, etc.<br />
-                - Implemented functions of the client end including network programming, database programming and the internal logic in java
-            </p>
+            <!--Musical Shooting-->
+            <div class="row">
+                <div class="1u 12u(mobile)">
+                </div>
+                <div class="5u 12u(mobile)">
+                    <iframe width="500" height="315" src="https://www.youtube.com/embed/nFsei6MDbyY" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="5u 12u(mobile)">
+                    <article>
+                        <h4>Music Shooter</h4>
+                        <p>This is a personal project named VR music shooting game. In this project I tried to combine as many gaming elements as I could to build a musical game in VR that never existed before.
+                            The game is called <em>Music Shooter</em>. In this game, the player shoots the targets according to the rhythm of the music.
+                            The player will be scored by the accuracy of his/her hitting the rhythm. At the same time, players can use props to increase HP or score, enhancing the uncertainty of the game.
+
+                        </p>
+                    </article>
+                </div>
+                <div class="1u 12u(mobile)">
+                </div>
+            </div>
         </div>
+
     </article>
 </div>
 
