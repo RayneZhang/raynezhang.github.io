@@ -40,7 +40,7 @@
     <article id="work">
         <div class="container">
             <header>
-                <h2 align="center">Here's some projects I did.</h2>
+                <h2 align="center">Here are some projects I did.</h2>
             </header>
             <!--Cubicle-->
             <div class="row">
@@ -52,8 +52,8 @@
                         <img name="cubicle-img" class="mySlides" src="images/cubicle/2.png" style="width:100%; height:100%; min-height:300px;">
                         <img name="cubicle-img" class="mySlides" src="images/cubicle/3.png" style="width:100%; height:100%; min-height:300px;">
                         <img name="cubicle-img" class="mySlides" src="images/cubicle/4.png" style="width:100%; height:100%; min-height:300px;">
-                        <img name="cubicle-img" class="mySlides" src="images/cubicle/5.png" style="width:100%; height:100% min-height:300px;">
-                        <img name="cubicle-img" class="mySlides" src="images/cubicle/6.png" style="width:100%; height:100% min-height:300px;">
+                        <img name="cubicle-img" class="mySlides" src="images/cubicle/5.png" style="width:100%; height:100%; min-height:300px;">
+                        <img name="cubicle-img" class="mySlides" src="images/cubicle/6.png" style="width:100%; height:100%; min-height:300px;">
                         <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
                             <div class="w3-left w3-hover-text-khaki" onclick="plusDivsCubicle(-1)">&#10094;</div>
                             <div class="w3-right w3-hover-text-khaki" onclick="plusDivsCubicle(1)">&#10095;</div>
@@ -197,6 +197,56 @@
                         </p>
                     </article>
                 </div>
+                <div class="1u 12u(mobile)">
+                </div>
+            </div>
+            <hr />
+            <!--3D Studio-->
+            <div class="row">
+                <div class="1u 12u(mobile)">
+                </div>
+                <div class="5u 12u(mobile)">
+                    <article>
+                        <h4>Virtual Broadcast Studio</h4>
+                        <p>This is a research project that I conducted in my junior year.
+                            This is an <em>Augmented Reality TV System</em> based on multimodal interactive editing. In this system, users can do a series of real-time editing
+                            operations including adding, moving, deleting virtual objects through an interactive way, which lays a good groundwork for the augmented reality TV system
+                            in interactive editing and broadcasting. In this project, I implemented the calibration between a Microsoft Kinect and an HD camera as well as the interactions
+                            between the user and virtual models using poses and shells.
+                        </p>
+                    </article>
+                </div>
+                <div class="5u 12u(mobile)">
+                    <iframe width="500" height="315" src="https://www.youtube.com/embed/S0UBqOk0GpE" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <script>
+                    var slideIndex = 1;
+                    showDivsMaze(slideIndex);
+
+                    function plusDivsMaze(n) {
+                        showDivsMaze(slideIndex += n);
+                    }
+
+                    function currentDivMaze(n) {
+                        showDivsMaze(slideIndex = n);
+                    }
+
+                    function showDivsMaze(n) {
+                        var i;
+                        var x = document.getElementsByName("maze-img");
+                        var dots = document.getElementsByName("maze-dot");
+                        if (n > x.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = x.length}
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" w3-white", "");
+                        }
+                        x[slideIndex-1].style.display = "block";
+                        dots[slideIndex-1].className += " w3-white";
+                    }
+                </script>
                 <div class="1u 12u(mobile)">
                 </div>
             </div>
