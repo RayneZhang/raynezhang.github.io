@@ -259,6 +259,75 @@
                 <div class="1u 12u(mobile)">
                 </div>
             </div>
+            <hr />
+            <!--Family Sharing APP-->
+            <div class="row">
+                <div class="1u 12u(mobile)">
+                </div>
+                <div class="5u 12u(mobile)">
+                    <div class="w3-content w3-display-container" style="max-width:300px">
+                        <img name="family-img" class="mySlides" src="images/family/1.png" style="width:100%; height:100%; min-height:100px;">
+                        <img name="family-img" class="mySlides" src="images/family/2.png" style="width:100%; height:100%; min-height:100px;">
+                        <img name="family-img" class="mySlides" src="images/family/3.png" style="width:100%; height:100%; min-height:100px;">
+                        <img name="family-img" class="mySlides" src="images/family/4.png" style="width:100%; height:100%; min-height:100px;">
+                        <img name="family-img" class="mySlides" src="images/family/5.png" style="width:100%; height:100%; min-height:100px;">
+                        <img name="family-img" class="mySlides" src="images/family/6.png" style="width:100%; height:100%; min-height:100px;">
+                        <img name="family-img" class="mySlides" src="images/family/7.png" style="width:100%; height:100%; min-height:100px;">
+                        <div class="w3-center w3-container w3-section w3-large w3-text-light-blue w3-display-bottommiddle" style="width:100%">
+                            <div class="w3-left w3-hover-text-khaki" onclick="plusDivsFamily(-1)">&#10094;</div>
+                            <div class="w3-right w3-hover-text-khaki" onclick="plusDivsFamily(1)">&#10095;</div>
+                            <span name="family-dot" class="w3-badge demo w3-border w3-transparent w3-hover-light-blue" onclick="currentDivFamily(1)"></span>
+                            <span name="family-dot" class="w3-badge demo w3-border w3-transparent w3-hover-light-blue" onclick="currentDivFamily(2)"></span>
+                            <span name="family-dot" class="w3-badge demo w3-border w3-transparent w3-hover-light-blue" onclick="currentDivFamily(3)"></span>
+                            <span name="family-dot" class="w3-badge demo w3-border w3-transparent w3-hover-light-blue" onclick="currentDivFamily(4)"></span>
+                            <span name="family-dot" class="w3-badge demo w3-border w3-transparent w3-hover-light-blue" onclick="currentDivFamily(5)"></span>
+                            <span name="family-dot" class="w3-badge demo w3-border w3-transparent w3-hover-light-blue" onclick="currentDivFamily(6)"></span>
+                            <span name="family-dot" class="w3-badge demo w3-border w3-transparent w3-hover-light-blue" onclick="currentDivFamily(7)"></span>
+                        </div>
+                    </div>
+
+                    <script>
+                        var slideIndex = 1;
+                        showDivsFamily(slideIndex);
+
+                        function plusDivsFamily(n) {
+                            showDivsFamily(slideIndex += n);
+                        }
+
+                        function currentDivFamily(n) {
+                            showDivsFamily(slideIndex = n);
+                        }
+
+                        function showDivsFamily(n) {
+                            var i;
+                            var x = document.getElementsByName("family-img");
+                            var dots = document.getElementsByName("family-dot");
+                            if (n > x.length) {slideIndex = 1}
+                            if (n < 1) {slideIndex = x.length}
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" w3-light-blue", "");
+                            }
+                            x[slideIndex-1].style.display = "block";
+                            dots[slideIndex-1].className += " w3-light-blue";
+                        }
+                    </script>
+                </div>
+                <div class="5u 12u(mobile)">
+                    <article>
+                        <h4>Family Sharing APP</h4>
+                        <p>This is a project supported by the National University Student Innovation Program.
+                            I led my team to develop an Android APP for family members to share their schedules and personal goals as well as supervising and interacting with each other,
+                            with the goal of strengthening family bonds. In this project, I designed the ways of interaction among family members in the APP including likes, dislikes, various punishments, etc.
+                            I also implemented all features of the client using skills of android programming, network programming and database programming in Java.
+                        </p>
+                    </article>
+                </div>
+                <div class="1u 12u(mobile)">
+                </div>
+            </div>
         </div>
 
     </article>
