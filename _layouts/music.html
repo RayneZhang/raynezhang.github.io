@@ -1,0 +1,51 @@
+{% include header.html %}
+
+  {% include music-hero.html %}
+
+  <hr>
+
+    <main id="portfolio">
+      <!-- Performances -->
+      <h2 class="section-title text-center">Performances</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              
+                  <div class="wow fadeIn">
+
+                    <div class="content-wrap">
+
+                      <div class="row auto-clear">
+
+                        {% include music-performance.html %}
+
+                      </div>  
+
+                    </div> 
+
+                  </div>   
+            </div>
+          </div>
+        </div>
+
+      <hr>
+
+        <!-- Songs -->
+      <h2 class="section-title text-center">Songs</h2>
+          <div class="container">
+              <div class="col-md-12">
+                  <div class="wow fadeIn">
+
+                    <div class="content-wrap">
+
+                        {% include music-song.html %}
+
+                    </div>
+
+                  </div>
+              </div>
+          </div>
+
+    </main>
+
+{% include footer.html %}

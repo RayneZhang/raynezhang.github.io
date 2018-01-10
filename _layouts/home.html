@@ -1,0 +1,45 @@
+{% include header.html %}
+
+    {% include home-hero.html %}
+
+    <main id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            {% for title in site.data.posts.section_title %}
+              <h2 class="section-title text-center">{{ title }}</h2>
+              
+              <!--{% if site.data.posts.section_subtitle != '' %}
+              <p class="section-subtitle text-center">{{ site.data.posts.section_subtitle }}</p>
+              {% endif %}-->
+
+              <div class="break"></div>
+
+                <div class="wow fadeIn">
+
+                  <div class="content-wrap">
+
+                    <div class="row auto-clear">
+                      {% for post in paginator.posts %}
+
+                        <!--<div class="row">-->
+                        {% if post.categories contains title %}
+                          {% include research-content.html %}
+                        {% endif %}
+                        <!--</div>-->
+    
+                      {% endfor %}
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+{% include footer.html %}

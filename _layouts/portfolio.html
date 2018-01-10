@@ -1,0 +1,40 @@
+{% include header.html %}
+
+    {% include portfolio-hero.html %}
+
+    <hr>
+
+    <main id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+          
+                <div class="wow fadeIn">
+
+                  <div class="content-wrap">
+
+                    <div class="row auto-clear">
+                      {% for title in site.data.posts.section_title %}
+                        <!--{% if site.data.posts.section_subtitle != '' %}
+                        <p class="section-subtitle text-center">{{ site.data.posts.section_subtitle }}</p>
+                        {% endif %}-->
+                       
+                        {% for post in site.posts %}
+
+                          {% if post.categories contains title %}
+                            {% include research-content.html %}
+                          {% endif %}
+                                  
+                        {% endfor %}
+                              
+                      {% endfor %}
+                    </div>  
+                  </div> 
+                </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+{% include footer.html %}

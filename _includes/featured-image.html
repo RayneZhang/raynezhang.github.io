@@ -1,0 +1,4 @@
+  {% if post.featured_image %}
+  <a href="{{ post.url | site.data.global.url }}"><img class="img-responsive" src="{{ post.featured_image }}" title="{{ post.title }}">
+  </a>
+  {% endif %}

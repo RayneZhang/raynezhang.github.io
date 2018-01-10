@@ -1,0 +1,26 @@
+{% include header.html %}
+
+  <article id="post-single">
+    <div class="container">
+      <div class="content-wrap">
+
+        <div class="row">
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+            <h2> {{ page.title }} </h2>
+            <hr>
+          </div>
+        </div>
+        <!--<div class="content-intro">
+          <img src="{{ page.featured_image }}"></img>
+        </div>-->
+
+        <div class="row">
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+          	{{ content }}
+      	  </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+{% include footer.html %}

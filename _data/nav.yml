@@ -1,0 +1,4 @@
+main:
+    - { url: '/portfolio.html', text: 'PORTFOLIO' }
+    - { url: '/music.html', text: 'MUSIC' }
+    - { url: '/files/LeiZhangCV.pdf', text: 'DOWNLOAD CV' }

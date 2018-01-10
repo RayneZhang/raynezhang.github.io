@@ -1,0 +1,234 @@
+<!doctype html>
+<head>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+
+  <title>Assembly Assitance in Augmented Reality (On-going) - Hello. I'm Lei(Rayne) Zhang.</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Hello. I'm Lei(Rayne) Zhang. - I'm a software developer and designer from Chicago creating useful things for the web." href="localhost:4000/feed.xml">
+  <link rel="alternate" type="application/atom+xml" title="Hello. I'm Lei(Rayne) Zhang. - I'm a software developer and designer from Chicago creating useful things for the web." href="localhost:4000/atom.xml">
+
+  <!-- Favicons -->
+  <link rel="icon" href="localhost:4000/img/favicon.png">
+
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700|Merriweather:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/animate.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body class="">
+
+<div class="main container" id="top">
+
+  
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">RayneZhang</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              
+                <li>
+                  <a href="/portfolio.html">PORTFOLIO</a>
+                </li>
+              
+                <li>
+                  <a href="/music.html">MUSIC</a>
+                </li>
+              
+                <li>
+                  <a href="/files/LeiZhangCV.pdf">DOWNLOAD CV</a>
+                </li>
+              
+            </ul>
+          </div>
+      </div>
+  </nav>
+  
+
+
+  <article id="post-single">
+    <div class="container">
+      <div class="content-wrap">
+
+        <div class="row">
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+            <h2> Assembly Assitance in Augmented Reality (On-going) </h2>
+            <hr>
+          </div>
+        </div>
+        <!--<div class="content-intro">
+          <img src="/img/posts/Assembly.jpg"></img>
+        </div>-->
+
+        <div class="meta">
+          <div class="row meta-container auto-clear">
+            <div class="meta-content col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <i class="meta-icon fa fa-clock-o fa-lg col-xs-3 col-sm-3 col-md-3 col-lg-3"></i>
+              <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" align="left">
+                <h4>Duration</h4>
+                
+                  <p>Oct 2017 - Now</p>
+                
+              </div>
+            </div>
+            <div class="meta-content col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <i class="meta-icon fa fa-user fa-lg col-xs-3 col-sm-3 col-md-3 col-lg-3"></i>
+              <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" align="left">
+                <h4>Advisor</h4>
+                
+                  <p>Xubo Yang</p>
+                
+              </div>
+            </div>
+            <div class="meta-content col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <i class="meta-icon fa fa-map-marker fa-lg col-xs-3 col-sm-3 col-md-3 col-lg-3"></i>
+              <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" align="left">
+                <h4>Location</h4>
+                
+                  <p>Digital ART Lab @ SJTU</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+          	<p><br /></p>
+
+<p><strong>MY CONTRIBUTIONS</strong></p>
+
+<p>I worked on the AR Assembly Assistance project as a developer and independent researcher at the Digital ART Lab, Shanghai Jiao Tong University. I was responsible for the object-based markerless registration in the HoloLens. I also designed and implemented the virtual instructions in the HoloLens and interactions using voice commands and gestures.</p>
+
+<p><br /></p>
+
+<h3 class="section-title text-center">Introduction</h3>
+
+<p>Object registration is always a key component in numerous Augmented Reality (AR) applications. As one of the most prominent AR headsets on the market, the Microsoft HoloLens has demonstrated strong portability and novel 3D hologram-like interfaces. However, since the HoloLens does not provide real-time, high resolution depth data, the registration process is severely limited to marker-based registration or employing external devices. In this project, I mainly address the problem of markerless registration of a 3D object solely in the HoloLens by implementing an efficient template-matching algorithm in the image space. A set of 2D edge templates of an object are employed to match a query image. My study focuses on industrial objects, which are mostly textureless, and the method has been tested on real environment, showing its efficiency, robustness and convenience.</p>
+
+<p><br /></p>
+
+<h3 class="section-title text-center">System Overview</h3>
+
+<p>Task guidance has been an active topic in the field of augmented reality (AR), with applications to a wide range of domains, including operations, assembly, maintenance, etc. Seeing instructional graphics overlaid directly on the actual task environment can significantly improve a user’s understanding compared to viewing instructions displayed on a nearby monitor or in a paper manual. AR technology enables a tech/worker to directly interact with the local environment for 3D spatial referencing and action demonstration and allows the user to visualize instructions directly overlaid on the environment. In our system, we propose an approach where a senior engineer makes the graphic animations on the computer in advance and a local tech/worker accomplishes the assembly task according to the virtual instructions overlaid on the environment wearing the Microsoft HoloLens.</p>
+
+<p><img src="/img/posts/Assembly/Overview.png" alt="" /></p>
+
+<p>My work lays on the local tech/user side, where I mainly developed the object registration, the graphic interface, the animation display and the interactions using voice commands and gestures. Since this is a project cooperated with Shanghai General Motor Company and the pictures of the motor are confidential, we can only show the pixelated pictures. To better illustrate my research, I will use another model for the following demonstration.</p>
+
+<p><br /></p>
+
+<h3 class="section-title text-center">Markerless Object Registration in the HoloLens</h3>
+
+<p>To augment object-specific virtual instructions in the HoloLens, first of all we need to find the 3D location and 3D pose/rotation of the motor in the real environment. A disadvantage of the Microsoft HoloLens is that real-time, high resolution depth data provided by HoloLens depth sensor is not accessible. The HoloLens does have spatial mapping functions, however mesh and vertices generated are not accurate enough for detailed 3D information. This disadvantage severely impedes the development of many 3D registration methods such as ICP algorithm. Due to this limitation, the state-of-the-art HoloLens applications use markers for object registration or register based on plane recognition instead of an object specific registration. One way to bypass the limitation is by utilizing external depth sensors such as Kinect or RealSense. However, these methods entailed complicated devicesetup and lost the system portability.</p>
+
+<p>In the past decades, people have employed texture information, feature points and shape for object recognition and registration. For textureless industrial objects, the methods of utilizing texture information or feature points may not be effective. On the other hand, edge or contours are invariant to general geometric transformations and illumination changes, and therefore suitable for recognizing and registrating 3D textureless objects.</p>
+
+<p>In this project, I implemented an image-based markerless registration method using the HoloLens in order to augment object-specific information(virtual instructions) into real environment(motors). I first generate edge templates of the 3D object seen from a number of viewpoints. Then I implement the Chamfer Matching algorithm between the templates and the edge map of the image. Since the starting pose of the object is unknown, the searching for the best alignment in the huge 6D pose space is extremely time-consuming, I employ techniques such as image down sampling to reduce time cost of the matching algorithm. I also propose several reasonable assumptions based on practical condition.</p>
+
+<p>The figure below shows the flowchart of the registration process.</p>
+
+<p><img src="/img/posts/Assembly/Diagram.png" alt="" /></p>
+
+<h4 id="assumption">Assumption</h4>
+
+<p>In this project, We assume that each physical object has a virtual replica, named digital models. We will use a model of a female body in the following demonstration.</p>
+
+<p><img src="/img/posts/Assembly/Assumption.png" alt="" /></p>
+
+<p><br /></p>
+
+<h4 id="offline-templates-generation">Offline Templates Generation</h4>
+
+<p>[To Be Updated]</p>
+
+<p><br /></p>
+
+<h4 id="edge-extraction">Edge Extraction</h4>
+
+<p>[To Be Updated]</p>
+
+<p><br /></p>
+
+<h4 id="chamfer-matching">Chamfer Matching</h4>
+
+<p>[To Be Updated]</p>
+
+<p><br /></p>
+
+<h4 id="results">Results</h4>
+
+<p>The image-based registration method has been tested on a model of Female Body using the HoloLens. The target model with the height of 30cm and the width of 15cm is made of curved and complex shapes. This model is impossible to register using the low resolution depth data provided by the HoloLens. We have the corresponding 3D digital model of the same size and generated 1620 off-line edge templates of each resolution level using the digital model. The original resolution of the captured image of the HoloLens is 1280 x 720. We have successfully augmented the model with the digital one, showing its convenience. Figures below show the results of the registration task on poses and details from different angles.</p>
+
+<p><img src="/img/posts/Assembly/Results.png" alt="" /></p>
+
+<p><img src="/img/posts/Assembly/Details.png" alt="" /></p>
+
+<p>As you can see in the pictures of details, the 6D pose estimation is not so accurate. Whether the accuracy is desirable for virtual instructions in the HoloLens is still under research. In addition, the registration process is not real-time (about 1min) so I am still seeking to optimize the process. For more details about the implementation or the project, please feel free to contact me.</p>
+
+      	  </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-12 col-md-2 col-md-offset-1">
+            <p class="text-muted text-left "><a href="localhost:4000">© 2017 Lei Zhang</a></p>
+          </div>
+
+          <div class="col-xs-12 col-md-6 col-md-offset-2">
+            <a class="section-jump" href="#top">
+              <i class="fa fa-angle-up fa-3x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- .main.container -->
+
+    <!-- JavaScript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="localhost:4000/js/wow.min.js"></script>
+    <script src="localhost:4000/js/app.js"></script>
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', ' ', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+    </body>
+</html>
+

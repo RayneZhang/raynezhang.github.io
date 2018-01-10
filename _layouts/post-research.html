@@ -1,0 +1,58 @@
+{% include header.html %}
+
+  <article id="post-single">
+    <div class="container">
+      <div class="content-wrap">
+
+        <div class="row">
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+            <h2> {{ page.title }} </h2>
+            <hr>
+          </div>
+        </div>
+        <!--<div class="content-intro">
+          <img src="{{ page.featured_image }}"></img>
+        </div>-->
+
+        <div class="meta">
+          <div class="row meta-container auto-clear">
+            <div class="meta-content col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <i class="meta-icon fa fa-clock-o fa-lg col-xs-3 col-sm-3 col-md-3 col-lg-3"></i>
+              <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" align="left">
+                <h4>Duration</h4>
+                {% if page.duration != "" %}
+                  <p>{{ page.duration }}</p>
+                {% endif %}
+              </div>
+            </div>
+            <div class="meta-content col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <i class="meta-icon fa fa-user fa-lg col-xs-3 col-sm-3 col-md-3 col-lg-3"></i>
+              <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" align="left">
+                <h4>Advisor</h4>
+                {% if page.advisor != "" %}
+                  <p>{{ page.advisor }}</p>
+                {% endif %}
+              </div>
+            </div>
+            <div class="meta-content col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <i class="meta-icon fa fa-map-marker fa-lg col-xs-3 col-sm-3 col-md-3 col-lg-3"></i>
+              <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" align="left">
+                <h4>Location</h4>
+                {% if page.location != "" %}
+                  <p>{{ page.location }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+          	{{ content }}
+      	  </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+{% include footer.html %}

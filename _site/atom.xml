@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Hello. I'm Lei(Rayne) Zhang.</title>
+ <link href="localhost:4000/atom.xml" rel="self"/>
+ <link href="localhost:4000/"/>
+ <updated>2018-01-10T21:18:52+08:00</updated>
+ <id>localhost:4000</id>
+ <author>
+   <name>RayneZhang</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Assembly Assitance in Augmented Reality (On-going)</title>
+   <link href="localhost:4000/research/2017/11/20/Assembly-Assitance.html"/>
+   <updated>2017-11-20T23:56:00+08:00</updated>
+   <id>localhost:4000/research/2017/11/20/Assembly Assitance</id>
+   <content type="html">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MY CONTRIBUTIONS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I worked on the AR Assembly Assistance project as a developer and independent researcher at the Digital ART Lab, Shanghai Jiao Tong University. I was responsible for the object-based markerless registration in the HoloLens. I also designed and implemented the virtual instructions in the HoloLens and interactions using voice commands and gestures.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;Object registration is always a key component in numerous Augmented Reality (AR) applications. As one of the most prominent AR headsets on the market, the Microsoft HoloLens has demonstrated strong portability and novel 3D hologram-like interfaces. However, since the HoloLens does not provide real-time, high resolution depth data, the registration process is severely limited to marker-based registration or employing external devices. In this project, I mainly address the problem of markerless registration of a 3D object solely in the HoloLens by implementing an efficient template-matching algorithm in the image space. A set of 2D edge templates of an object are employed to match a query image. My study focuses on industrial objects, which are mostly textureless, and the method has been tested on real environment, showing its efficiency, robustness and convenience.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;System Overview&lt;/h3&gt;
+
+&lt;p&gt;Task guidance has been an active topic in the field of augmented reality (AR), with applications to a wide range of domains, including operations, assembly, maintenance, etc. Seeing instructional graphics overlaid directly on the actual task environment can significantly improve a user’s understanding compared to viewing instructions displayed on a nearby monitor or in a paper manual. AR technology enables a tech/worker to directly interact with the local environment for 3D spatial referencing and action demonstration and allows the user to visualize instructions directly overlaid on the environment. In our system, we propose an approach where a senior engineer makes the graphic animations on the computer in advance and a local tech/worker accomplishes the assembly task according to the virtual instructions overlaid on the environment wearing the Microsoft HoloLens.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/Assembly/Overview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My work lays on the local tech/user side, where I mainly developed the object registration, the graphic interface, the animation display and the interactions using voice commands and gestures. Since this is a project cooperated with Shanghai General Motor Company and the pictures of the motor are confidential, we can only show the pixelated pictures. To better illustrate my research, I will use another model for the following demonstration.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;Markerless Object Registration in the HoloLens&lt;/h3&gt;
+
+&lt;p&gt;To augment object-specific virtual instructions in the HoloLens, first of all we need to find the 3D location and 3D pose/rotation of the motor in the real environment. A disadvantage of the Microsoft HoloLens is that real-time, high resolution depth data provided by HoloLens depth sensor is not accessible. The HoloLens does have spatial mapping functions, however mesh and vertices generated are not accurate enough for detailed 3D information. This disadvantage severely impedes the development of many 3D registration methods such as ICP algorithm. Due to this limitation, the state-of-the-art HoloLens applications use markers for object registration or register based on plane recognition instead of an object specific registration. One way to bypass the limitation is by utilizing external depth sensors such as Kinect or RealSense. However, these methods entailed complicated devicesetup and lost the system portability.&lt;/p&gt;
+
+&lt;p&gt;In the past decades, people have employed texture information, feature points and shape for object recognition and registration. For textureless industrial objects, the methods of utilizing texture information or feature points may not be effective. On the other hand, edge or contours are invariant to general geometric transformations and illumination changes, and therefore suitable for recognizing and registrating 3D textureless objects.&lt;/p&gt;
+
+&lt;p&gt;In this project, I implemented an image-based markerless registration method using the HoloLens in order to augment object-specific information(virtual instructions) into real environment(motors). I first generate edge templates of the 3D object seen from a number of viewpoints. Then I implement the Chamfer Matching algorithm between the templates and the edge map of the image. Since the starting pose of the object is unknown, the searching for the best alignment in the huge 6D pose space is extremely time-consuming, I employ techniques such as image down sampling to reduce time cost of the matching algorithm. I also propose several reasonable assumptions based on practical condition.&lt;/p&gt;
+
+&lt;p&gt;The figure below shows the flowchart of the registration process.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/Assembly/Diagram.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;assumption&quot;&gt;Assumption&lt;/h4&gt;
+
+&lt;p&gt;In this project, We assume that each physical object has a virtual replica, named digital models. We will use a model of a female body in the following demonstration.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/Assembly/Assumption.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;offline-templates-generation&quot;&gt;Offline Templates Generation&lt;/h4&gt;
+
+&lt;p&gt;[To Be Updated]&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;edge-extraction&quot;&gt;Edge Extraction&lt;/h4&gt;
+
+&lt;p&gt;[To Be Updated]&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;chamfer-matching&quot;&gt;Chamfer Matching&lt;/h4&gt;
+
+&lt;p&gt;[To Be Updated]&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;results&quot;&gt;Results&lt;/h4&gt;
+
+&lt;p&gt;The image-based registration method has been tested on a model of Female Body using the HoloLens. The target model with the height of 30cm and the width of 15cm is made of curved and complex shapes. This model is impossible to register using the low resolution depth data provided by the HoloLens. We have the corresponding 3D digital model of the same size and generated 1620 off-line edge templates of each resolution level using the digital model. The original resolution of the captured image of the HoloLens is 1280 x 720. We have successfully augmented the model with the digital one, showing its convenience. Figures below show the results of the registration task on poses and details from different angles.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/Assembly/Results.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/Assembly/Details.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see in the pictures of details, the 6D pose estimation is not so accurate. Whether the accuracy is desirable for virtual instructions in the HoloLens is still under research. In addition, the registration process is not real-time (about 1min) so I am still seeking to optimize the process. For more details about the implementation or the project, please feel free to contact me.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Music Shooter: A Musical Shooting Game in VR</title>
+   <link href="localhost:4000/projects/2017/11/20/Music-Shooter.html"/>
+   <updated>2017-11-20T23:56:00+08:00</updated>
+   <id>localhost:4000/projects/2017/11/20/Music Shooter</id>
+   <content type="html">&lt;p&gt;This is a VR music shooting game that I implemented independently. In this project I tried to combine as many gaming elements as I could to build a musical game in VR that never existed before. The game is called Music Shooter. In this game, the player shoots the targets according to the rhythm of the music. The player will be scored by the accuracy of his/her hitting the rhythm. At the same time, players can use props to increase HP or score, enhancing the uncertainty of the game.&lt;/p&gt;
+
+&lt;p&gt;Play (You may need HTC VIVE): &lt;a href=&quot;/files/MusicShooter_win32.zip&quot;&gt;Win32&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/nFsei6MDbyY&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allow=&quot;encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>VR Maze: A VR Gaming Platform for Training Navigation Abilities</title>
+   <link href="localhost:4000/projects/2017/11/20/VRMaze.html"/>
+   <updated>2017-11-20T23:56:00+08:00</updated>
+   <id>localhost:4000/projects/2017/11/20/VRMaze</id>
+   <content type="html">&lt;p&gt;This is the capstone project of the course Human-Computer Interaction. This game called VR Maze aims to train people’s navigation abilities. The player is put in a randomly generated maze at the beginning of the game. Given a randomly generated destination and the limited time to memorize the route on the minimap, the player will navigate in the maze using HTC VIVE handler. The amount of time that the player takes measures the player’s navigation ability. The player wins the game once he/she reaches the destination. This project ranked the 1st out of 43 students in the course Human-Computer Interaction.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Automatic Water Level Detection System</title>
+   <link href="localhost:4000/projects/2017/11/20/Water-Level-Detection-System.html"/>
+   <updated>2017-11-20T23:56:00+08:00</updated>
+   <id>localhost:4000/projects/2017/11/20/Water Level Detection System</id>
+   <content type="html">&lt;p&gt;This is the capstone project of the course Computer Vision. I led 3 team members to develop a system that can detect water level based on the given image retrieved from the monitor. In this project, I was mainly responsible for retrieving the characteristics of the signes on the water gauge using SIFT and HOG. I also trained the prediction model that can predict the water level using Support Vector Machine(SVM) methods.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;Image Preprocessing&lt;/h3&gt;
+
+&lt;p&gt;To detect the water level, we need to find the water gauge at first, which is in the image preprocess. The image preprocess contains 4 steps: 1) Scale the image to a suitable size. 2) Do the edge detection using different parameters and determine the optimal parameter danamically. 3) Scan the edge image and count the times of black and white stripe. 4) Compute the variance of the times of stripe and determine the cadidate of the water gauge.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/WaterLevel/PreProcess1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/WaterLevel/PreProcess2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;Water Level Detection&lt;/h3&gt;
+
+&lt;p&gt;To count the number of “E” on the water gauge, which is equivalent to detecting the water level, I first retrieve the HOG characteristic from the positive and negative sample sets, and then import them to SVM for training. After training with SVM, a predicting model is obtained to detect the pattern of “E” in the image of the given water gauge. At last, we can compute the exact water level by counting the number of “E” in the column that contains the most “E”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/WaterLevel/Result.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Family: An Android App for the interactions in family</title>
+   <link href="localhost:4000/projects/2017/11/20/Family.html"/>
+   <updated>2017-11-20T23:56:00+08:00</updated>
+   <id>localhost:4000/projects/2017/11/20/Family</id>
+   <content type="html">&lt;p&gt;This is a project supported by the National University Student Innovation Program. I led 3 team members to develop an Android APP for family members to share their schedules and personal goals as well as supervising and interacting with each other, with the goal of strengthening family bonds. In this project, I designed the ways of interactions among family members in the APP including likes, dislikes, various punishments, etc. I also implemented all features of the client using skills of android programming, network programming and database programming in Java.&lt;/p&gt;
+
+&lt;p&gt;[To Be Updated]&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Link Game: A Simple Game Developed using FLTK</title>
+   <link href="localhost:4000/projects/2017/11/20/Link-Game.html"/>
+   <updated>2017-11-20T23:56:00+08:00</updated>
+   <id>localhost:4000/projects/2017/11/20/Link Game</id>
+   <content type="html">&lt;p&gt;This is a little game that I developed when I was a freshman in university. In this game called Link Game, players need to find two cards with the same pattern but no more than 3 straight lines to connect them. I used the tool FLTK, an old but useful GUI tool to implement the game. The main logic contains randomly generating the map, eliminating two cards, recording time and score, determining the condition of winning, etc. I implemented this game as a practice of object-based programming of C++ and it got A+ in the course “Curriculum Design of Programming”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/LinkGame/Level1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/LinkGame/Level2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/LinkGame/Level3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Cubicle: An Adaptive Educational Gaming Platform for Training Spatial Visualization Skills (IUI'2018)</title>
+   <link href="localhost:4000/research/2017/10/05/Cubicle.html"/>
+   <updated>2017-10-06T05:15:00+08:00</updated>
+   <id>localhost:4000/research/2017/10/05/Cubicle</id>
+   <content type="html">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MY CONTRIBUTIONS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;By gamifying the paper-based training materials into digital games, I implemented one of the gaming modules and wrote the corresponding parser to collect the in-game players’ behavioral data, in order to help researchers or instructors acquire more insights into players’ problem-solving strategies. Besides this project, I also worked on &lt;a href=&quot;/research/2017/10/05/Sketching-Interface.html&quot;&gt;another project&lt;/a&gt; during my visit at UIUC.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TEAMMATES&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ziang Xiao, Zeya Peng, Hanfei Ren, Shiliang Zuo, Yuqi Yao&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;Research has demonstrated that spatial visualization skills are crucial for success in STEM disciplines. With an increasing number of students entering STEM disciplines, the question of how to effectively train students’ spatial visualization skills has become very important. While a scalable existing solution is to implement online workshops for students, the problem of how to motivate students to participate in these online workshops remains unsolved. In this study, we studied gamification as a way to motivate first year engineering students to take part in an online workshop designed to train their spatial visualization skills. Our game contains eight modules, each designed to train a different component of spatial visualization. The game records players’ in-game behavior with high granularity, which allows us to provide automated, scalable feedback on players’ problem-solving strategies. Ten students with different levels of spatial ability played our game and expressed a strong interest in using the game to train their spatial visualization skills in the future. In addition, our analysis of players’ ingame behaviors shows the potential benefits of implementing adaptive and personalized learning guidance.&lt;/p&gt;
+
+&lt;p&gt;Download Game: &lt;a href=&quot;/files/Cubicle_win32.zip&quot;&gt;Win32&lt;/a&gt;  &lt;a href=&quot;/files/Cubicle_win64.zip&quot;&gt;Win64&lt;/a&gt;  &lt;a href=&quot;/files/Cubicle_mac.zip&quot;&gt;Mac&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Download Paper (Submitted version): &lt;a href=&quot;/files/cubicle.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Ziang Xiao, Helen Wauck, Zeya Peng, Hanfei Ren, Lei Zhang, Shiliang Zuo, Yuqi Yao, Wai-Tat Fu. &lt;em&gt;Cubicle: An Adaptive Educational Gaming Platform for Training Spatial Visualization Skills.&lt;/em&gt; In Proceedings of the 23rd International Conference on Intelligent User Interfaces (IUI’18, accepted).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;Flat Pattern&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/cubicle/introduction.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Flat Pattern is the module that I implemented independantly. In this game, the player is shown a 2D flat target pattern and a corresponding 3D model. The player can cut an edge to unbind the two faces that it connects, then unfold the whole model progressively. The goal is to unfold the 3D model and make it the same pattern as the 2D target pattern. The player is only allowed to undo one edge cutting; otherwise, the level needs to be reset.&lt;/p&gt;
+
+&lt;p&gt;Different levels are designed based on the complexity of the 3D model and the number of hints to help the students acquire the related visuospatial skills gradually. At first, hints are given by displaying icons on certain faces to help the player establish the correspondence between the 3D model and the 2D pattern. As the difficulty increases, players must establish the relationship on their own with fewer hints and more complicated models.&lt;/p&gt;
+
+&lt;p&gt;This game module aims to enhance students’ capabilities of establishing the corresponding relationship between a 3D model and the unfolded 2D pattern. This requires the ability of 2D to 3D transformation and perspective taking. During the gameplay, the player is expected to envision the spatial relationship between faces on a 3D model.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/cubicle/levels.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;Dungeon Maze&lt;/h3&gt;
+
+&lt;p&gt;To connect the 8 game modules, we design a dungeon maze. The premise of the game is that the player is trapped in a dungeon maze. To escape, the player needs to navigate through the maze and unlock all the rooms. The player starts from a large center room with multiple smaller adjoining rooms. Each smaller room contains a totem, the entry to a game module. In each game module, a chain of locked rooms contains different levels in that game module. Finishing the game task in the room is the only way to unlock the door to the next room.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/cubicle/maze.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;Tutorials &amp;amp; Behavioral Data&lt;/h3&gt;
+
+&lt;p&gt;To make sure that the player grasps the gaming techniques quickly, I designed and implemented a tutorial, which guides the player to get familiar with the basic operations and unfold a simple cube progressively everytime when the player enters the Flat Pattern module.&lt;/p&gt;
+
+&lt;p&gt;A csv file is generated for each player to record every step of the player’s operations. The data include the operation type, the clicked line, the timestamp, the time cost of each level, and the final score. These behavioral data during gameplay is essential to help researchers or instructors acquire more insights into players’ problem-solving strategies and assess their corresponding abilities.&lt;/p&gt;
+
+&lt;!--&lt;div class=&quot;row auto-clear&quot;&gt;
+	&lt;div class=&quot;col-xs-6 col-sm-6 col-md-6 col-lg-6&quot; align=&quot;middle&quot;&gt;
+    	&lt;img src=&quot;/img/posts/cubicle/tutorial.png&quot;&gt;
+        &lt;p&gt;Tutorials&lt;/p&gt;
+	&lt;/div&gt;
+    &lt;div class=&quot;col-xs-6 col-sm-6 col-md-6 col-lg-6&quot; align=&quot;middle&quot;&gt;
+    	&lt;img src=&quot;/img/posts/cubicle/data.png&quot;&gt;
+        &lt;p&gt;Behavioral Data&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;--&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/cubicle/tutorial.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/cubicle/data.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;User Study &amp;amp; More Details&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;See&lt;/strong&gt;: &lt;a href=&quot;/files/cubicle.pdf&quot;&gt;Ziang Xiao, Helen Wauck, Zeya Peng, Hanfei Ren, Lei Zhang, Shiliang Zuo, Yuqi Yao, Wai-Tat Fu. &lt;em&gt;Cubicle: An Adaptive Educational Gaming Platform for Training Spatial Visualization Skills.&lt;/em&gt; In Proceedings of the 23rd International Conference on Intelligent User Interfaces (IUI’18, accepted)&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Sketching Interface for Spatial Training Platform</title>
+   <link href="localhost:4000/research/2017/10/05/Sketching-Interface.html"/>
+   <updated>2017-10-05T23:56:00+08:00</updated>
+   <id>localhost:4000/research/2017/10/05/Sketching Interface</id>
+   <content type="html">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MY CONTRIBUTIONS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In this project, I implemented a free-hand sketching interface, which is the core of the spatial training exercises, and intergreated this interface into the current web platform for training students’ visuaospatial skills. Besides this project, I also worked on &lt;a href=&quot;/research/2017/10/05/Cubicle.html&quot;&gt;another project&lt;/a&gt; during my visit at UIUC.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TEAMMATES&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ziang Xiao: Back end development, data analysis.&lt;/p&gt;
+
+&lt;p&gt;Yuqi Yao: Front end development, user experience research and design.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;Due to the importance of visuospatial skill in the field of STEM education, researchers and instructors have put a lot of effort into evaluating and training engineering students’ visuospatial skills. However, previous methods often rely on traditional paper-based questions and face-to-face visuospatial training workshops, which are costly and timeconsuming, especially for large classes. We have designed and evaluated an online platform to provide a low-cost, scalable solution to effectively evaluate and train visuospatial skills, as well as increase students’ motivation of continue studying in STEM programs. In addition, the online platform can facilitate the analysis of behavioral and error patterns, which can lead to design of intelligent features that improve learning through the use of adaptive and individualized learning modules.&lt;/p&gt;
+
+&lt;p&gt;The free-hand sketching tool allows students to make isometric and multi-view drawings, which are the cores of traning visuospatial skills, using their computer mice. The free-hand sketching tool provides a working area with an isometric dot grid or a dot grid to guide drawing. Students can add or delete a line between two dots without any constraints. The tool also keeps track of students’ drawing process step by step. A comprehensive time-stamped log file documenting students’ drawing actions will be generated as well for future error pattern analysis. The log file can easily automate the grading process as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;Sketching Interface&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/sketch/sketching.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Users can join two dots to make a straight line on two types of grids - isometric and orthographic.&lt;/li&gt;
+  &lt;li&gt;Delete an existing line by clicking the two ends of the line&lt;/li&gt;
+  &lt;li&gt;Users can draw two types of lines - Solid Line and Dashed Line&lt;/li&gt;
+  &lt;li&gt;Clear the drawing panel and start over&lt;/li&gt;
+  &lt;li&gt;Upload the current work to the server&lt;/li&gt;
+  &lt;li&gt;Download the previous work from the server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I designed and implemented the sketching application independently using Unity. This application is published in webGL and integrated into the existing online spatial training platform. Since the upload/download feature needs development on the server side, I also developed this interface on the server end in Django using techniques of network programming.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;Spatial Training Platform Overview&lt;/h3&gt;
+
+&lt;div class=&quot;row auto-clear&quot;&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-12 col-md-12 col-lg-12&quot; align=&quot;middle&quot;&gt;
+        &lt;img src=&quot;/img/posts/sketch/home.png&quot; /&gt;
+        &lt;p&gt;Homepage of the platform&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row auto-clear&quot;&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-12 col-md-12 col-lg-12&quot; align=&quot;middle&quot;&gt;
+        &lt;img src=&quot;/img/posts/sketch/choice.png&quot; /&gt;
+        &lt;p&gt;a) Multiple Choices&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;row auto-clear&quot;&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-12 col-md-12 col-lg-12&quot; align=&quot;middle&quot;&gt;
+        &lt;img src=&quot;/img/posts/sketch/feedback.png&quot; /&gt;
+        &lt;p&gt;b) Feedback Module&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--&lt;div class=&quot;row auto-clear&quot;&gt;
+	&lt;div class=&quot;col-xs-6 col-sm-6 col-md-6 col-lg-6&quot; align=&quot;middle&quot;&gt;
+    	&lt;img src=&quot;/img/posts/sketch/choice.png&quot;&gt;
+        &lt;p&gt;a) Multiple Choices&lt;/p&gt;
+	&lt;/div&gt;
+    &lt;div class=&quot;col-xs-6 col-sm-6 col-md-6 col-lg-6&quot; align=&quot;middle&quot;&gt;
+    	&lt;img src=&quot;/img/posts/sketch/feedback.png&quot;&gt;
+        &lt;p&gt;b) Feedback Module&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;--&gt;
+
+&lt;div class=&quot;row auto-clear&quot;&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-12 col-md-12 col-lg-12&quot; align=&quot;middle&quot;&gt;
+        &lt;img src=&quot;/img/posts/sketch/sketch.png&quot; /&gt;
+        &lt;p&gt;c) Sketching Questions&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Our online platform is designed to offer a comprehensive assessment and training of visuospatial skills using a set of well-tested multiple choice and free-hand sketching questions. The online platform has two major functions: An interface for answering multiple choice questions and a free-hand sketching tool for answering drawing problems. The interface for the multiple choice questions (Figure a) allows the student to answer questions by clicking on the correct answers, and the system will time-stamped all user actions and automatically determine if the final answers submitted are correct. The platform will also provide feedback (Figure b) to students on their performance. The free-hand sketching tool (Figure c) allows students to make isometric and multi-view drawings (which are the cores of training visuospatial skills) using their computer mice to answer the sketching questions. This platform has 7 weeks of exercises. Currently, my other two teammates (Ziang and Yuqi) are conducting the one-term-long user study at UIUC.&lt;/p&gt;
+
+&lt;p&gt;For a complete list of faculty members, previous graduate students and research assistants working on the project, please visit &lt;a href=&quot;http://cascade.cs.illinois.edu/education.html&quot;&gt;Cascade Lab&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Augmented Reality TV System Based on Multimodal Mixed Interactive Editing (ChinaVR'2017)</title>
+   <link href="localhost:4000/research/2017/06/01/Virtual-Studio.html"/>
+   <updated>2017-06-02T05:15:00+08:00</updated>
+   <id>localhost:4000/research/2017/06/01/Virtual Studio</id>
+   <content type="html">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MY CONTRIBUTIONS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In this project I mainly implemented the calibration between a Microsoft Kinect and an HD camera as well as the interactions between the user and virtual models using poses and voice commands.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TEAMMATES&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Jiang Lan, Han Yikai, Ma Hongfei, Wu Jiawen&lt;/p&gt;
+
+&lt;h3 class=&quot;section-title text-center&quot;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;In this system, we propose a new multimodal interface named “Pose-Shell-Speech”, which is more effective and natural in manipulating virtual objects when comparing with the gesture-only interface. Apart from that, users can do a series of basic editing operations including adding, moving, deleting virtual objects through an interactive way even when the system is running, and this system has a good scalability, which lays a good groundwork for the augmented reality TV system in interactive editing.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Jiang Lan, Xiao Shuangjiu, Han Yikai, Zhang Lei, Ma Hongfei. &lt;em&gt;Augmented Reality TV System Based on Multimodal Mixed Interactive Editing.&lt;/em&gt; ChinaVR 2017, accepted.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/S0UBqOk0GpE&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+</content>
+ </entry>
+ 
+
+</feed>
