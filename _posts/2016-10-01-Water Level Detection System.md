@@ -9,7 +9,7 @@ description: 'Markerless Registration of 3D Object in the HoloLens'
 
 ---
 
-This is the capstone project of the course Computer Vision. I led 3 team members to develop a system that can detect water level based on the given image retrieved from the monitor. In this project, I was mainly responsible for retrieving the characteristics of the signes on the water gauge using SIFT and HOG. I also trained the prediction model that can predict the water level using Support Vector Machine(SVM) methods.
+This is the capstone project of the course Computer Vision. I led 3 team members to develop a system that can detect water level based on the given image retrieved from the monitor. In this project, I was mainly responsible for retrieving the characteristics of the patterns on the water gauge using SIFT and HOG. I also trained the prediction model that can predict the water level using Support Vector Machine(SVM) methods.
 
 <br />
 
