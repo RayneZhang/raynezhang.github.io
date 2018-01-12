@@ -15,7 +15,7 @@ location: Digital ART Lab @ SJTU
 
 **MY CONTRIBUTIONS**
 
-I worked on the AR Assembly Assistance project as a developer and independent researcher at the Digital ART Lab, Shanghai Jiao Tong University. I was responsible for the object-based markerless registration in the HoloLens. I also designed and implemented the virtual instructions in the HoloLens and interactions using voice commands and gestures.
+I worked on the AR Assembly Assistance project as an independent researcher and developer at the Digital ART Lab, Shanghai Jiao Tong University. I was responsible for the object-based markerless registration in the HoloLens. I also designed and implemented the virtual instructions in the HoloLens and interactions using voice commands and gestures.
 
 <br />
 
